@@ -73,7 +73,7 @@
         fetch("message_1.json").then((response) => {
             response.json().then((dados) => {
                 msg = dados.messages.reverse()
-                for (let i = 0; i < msg.lenght; i++) {
+                for (let i = 0; i < 500; i++) {
                     conteudo = msg[i].content.replace(/\\u([\d\w]{4})/gi, function (match, grp) {
                         return String.fromCharCode(parseInt(grp, 16));
                     })
